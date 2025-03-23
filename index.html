@@ -280,7 +280,6 @@ button:hover {
     gap: 25px;
     padding: 10px;
     width: max-content;
-    animation: scrollGallery 20s linear infinite;
     will-change: transform;
 }
 
@@ -307,9 +306,9 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .scrolling-gallery {
-        animation: none; /* Disable animation for smaller screens */
-        overflow-x: auto;
-        scroll-behavior: smooth;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Enable snap scrolling */
+        scroll-behavior: smooth; /* Smooth scrolling */
     }
 
     .scrolling-gallery img {
@@ -320,17 +319,45 @@ button:hover {
 
 @media (max-width: 480px) {
     .scrolling-gallery {
-        animation: none; /* Disable animation for smaller screens */
-        overflow-x: auto;
-        scroll-behavior: smooth;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Enable snap scrolling */
+        scroll-behavior: smooth; /* Smooth scrolling */
     }
 
     .scrolling-gallery img {
         width: 200px;
         height: 160px;
+        scroll-snap-align: start; /* Align images for snap scrolling */
     }
 }
 
+/* Style for scroll indicators */
+.scroll-indicator {
+    display: none; /* Hide on smaller screens */
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: flex; /* Show on smaller screens */
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .scroll-indicator div {
+        width: 10px;
+        height: 10px;
+        background: #b8860b;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .scroll-indicator div.active {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
 /* Footer responsive adjustments */
 footer {
     text-align: center;
@@ -603,6 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelector('.scrolling-gallery').addEventListener('touchstart', (e) => {
     e.target.style.scrollBehavior = 'smooth';
 });
+
   </script>
 </body>
 </html>
