@@ -319,6 +319,12 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .scrolling-gallery {
+        animation: none; /* Disable animation for smaller screens */
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
     .scrolling-gallery img {
         width: 200px;
         height: 160px;
