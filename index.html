@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bittu & Seema's Silver Jubilee</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #5a2a2a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+            /* Header Styling */
+            header {
+        width: 100%;
+        height: 250px; /* Slightly thinner */
+        background: linear-gradient(to right, #fbd3e9, #ffc0cb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #b8860b;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .header-content {
+        max-width: 90%;
+    }
+
+    .header-content h1 {
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 6px rgba(218, 165, 32, 0.7);
+        color: #b8860b;
+    }
+
+    .header-content p {
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10px;
+        color: #8b6508;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header footer {
+            height: 200px;
+        }
+        .header-content h1 {
+            font-size: 48px;
+        }
+        .header-content p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header footer {
+            height: 180px;
+        }
+        .header-content h1 {
+            font-size: 38px;
+        }
+        .header-content p {
+            font-size: 16px;
+        }
+    }
+
+           /* Footer Styling */
+    footer {
+        width: 100%;
+        background: linear-gradient(to right, #fbd3e9, #ffc0cb);
+        color: #b8860b;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 18px;
+        font-weight: 500;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .footer-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer-content p {
+        margin: 10px 0;
+        text-shadow: 1px 1px 4px rgba(218, 165, 32, 0.7);
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #b8860b;
+        font-size: 24px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.2);
+        color: #daa520;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        footer {
+            font-size: 16px;
+            padding: 15px;
+        }
+        .social-icons a {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        footer {
+            font-size: 14px;
+            padding: 12px;
+        }
+        .social-icons a {
+            font-size: 18px;
+        }
+    }
+
+        .gold-divider {
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(to right, #c49a3d, #b8860b);
+            margin: 20px auto;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url('https://i.imgur.com/axd8E9p.png');
+            background-size: cover;
+            animation: waveMove 8s infinite linear;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes waveMove {
+            from { background-position: 0 0; }
+            to { background-position: 1000px 0; }
+        }
+
+       
+/* Thank You Section */
+.thank-you {
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.thank-you-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thank-you-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #5a2a2a;
+}
+
+.thank-you-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5a2a2a;
+}
+#nameInput {
+            text-transform: uppercase;
+        }
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 300px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+button:hover {
+  background: #ff3b2f;
+}
+
+#thankYouPass {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: slideIn 1s ease-in-out;
+  position: relative;
+}
+
+#passCanvas {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Gallery Section */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+    background: linear-gradient(to right, #ffefdb, #ffd1dc);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeInGallery 1.5s ease-in-out;
+}
+
+/* Scrolling gallery with flexbox */
+.scrolling-gallery {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    width: max-content;
+    animation: scrollGallery 20s linear infinite;
+    will-change: transform;
+}
+
+/* Image styling */
+.scrolling-gallery img {
+    width: 320px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Hover effect */
+.scrolling-gallery img:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Pause animation on hover */
+.gallery-container:hover .scrolling-gallery {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scrolling-gallery {
+        animation: none; /* Disable animation for smaller screens */
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .scrolling-gallery img {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrolling-gallery img {
+        width: 200px;
+        height: 160px;
+    }
+}
+
+/* Footer responsive adjustments */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 18px;
+    background: linear-gradient(to right, #fbd3e9, #ffc0cb);
+    color: #b8860b;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #b8860b;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 2s infinite;
+}
+
+.footer-links a:hover {
+    transform: scale(1.2);
+    color: #daa520;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .footer-links a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+    }
+}
+
+/* Add fade-in animation for gallery */
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add bounce animation for social icons */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Add scroll indicator styling */
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.scroll-indicator div {
+    width: 10px;
+    height: 10px;
+    background: #b8860b;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-indicator div.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments for scroll indicator */
+@media (max-width: 768px) {
+    .scroll-indicator div {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-indicator div {
+        width: 6px;
+        height: 6px;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+        <h1>BITTU & SEEMA</h1>
+        <p>Celebrating 25 Years of Love and Togetherness</p>
+    </div>
+</header>
+  <div style="max-width: 1200px; margin: 5px auto; padding: 5px; background: rgba(255, 255, 255, 0.3); border-radius: 5px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); text-align: center;">
+    <h2 style="color: #5a2a2a; font-family: 'Arial', sans-serif; font-size: 28px; margin-bottom: 15px;">
+        Memories Till Now – Silver Jubilee
+    </h2>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 5px;">
+      <iframe 
+      src="https://player.vimeo.com/video/1067367601?h=d955791db4&autoplay=1&muted=1&background=0" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;" 
+      title="Silver Jubilee Memories" 
+      playsinline>
+  </iframe>
+</div>
+    </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+
+
+
+
+  <!-- Thank You Section -->
+  <section class="thank-you">
+    <div class="thank-you-container">
+      <h2>Thank You for Joining Us!</h2>
+      <p>We are deeply grateful for your presence and support. Please enter your name below to receive your personalized thank-you pass.</p>
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button onclick="generateThankYouPass()">Get Your Pass</button>
+      <div id="thankYouPass" class="hidden">
+        <canvas id="passCanvas"></canvas>
+        <button onclick="downloadPass()">Download Pass</button>
+      </div>
+    </div>
+  </section>
+<!-- Animated Gallery -->
+<div class="gallery-container">
+  <div class="scrolling-gallery">
+      <img src="WhatsApp Image 2025-03-19 at 09.06.43_04dcd862.jpg" alt="Silver Jubilee Celebration 1">
+      <img src="WhatsApp Image 2025-03-19 at 22.47.10_86e2001a.jpg" alt="Silver Jubilee Celebration 2">
+      <img src="WhatsApp Image 2025-03-19 at 22.52.32_f5998397.jpg" alt="Silver Jubilee Celebration 3">
+      <img src="WhatsApp Image 2025-03-19 at 22.53.17_d2725b07.jpg" alt="Silver Jubilee Celebration 4">
+      <img src="WhatsApp Image 2025-03-19 at 22.55.32_33f878d7.jpg" alt="Silver Jubilee Celebration 5">
+  </div>
+  <div class="scroll-indicator">
+      <div class="active"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+</div>
+<br>
+<br>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <h2>Thank You for Celebrating With Us!</h2>
+        <p>We are grateful for all the love, support, and cherished memories over the years.</p>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="wave"></div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+// Load the thank-you pass image and add the name
+function generateThankYouPass() {
+  const nameInput = document.getElementById('nameInput').value;
+  const thankYouPass = document.getElementById('thankYouPass');
+  const canvas = document.getElementById('passCanvas');
+  const ctx = canvas.getContext('2d');
+
+  if (nameInput.trim() === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  // Load the image
+  const img = new Image();
+  img.src = 'Pink And Beige Modern Floral Illustrative Indian Wedding Thank You Card .jpg';
+  img.onload = () => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+
+    // Add the name to the image
+   
+    ctx.font = '60px "Bebas Neue", source-sans-pro, sans-serif';
+
+
+
+    ctx.fillStyle = '#990135';
+    ctx.textAlign = 'center';
+    ctx.fillText(nameInput.toUpperCase(), canvas.width / 2.33, canvas.height - 235);
+
+
+    // Show the pass
+    thankYouPass.classList.remove('hidden');
+  };
+}
+
+// Download the pass as an image
+function downloadPass() {
+  const canvas = document.getElementById('passCanvas');
+  const link = document.createElement('a');
+  link.download = 'ThankYouPass.png';
+  link.href = canvas.toDataURL();
+  link.click();
+}
+
+// Adjust gallery animation for mobile devices
+document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.querySelector('.scrolling-gallery');
+    const indicators = document.querySelectorAll('.scroll-indicator div');
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        gallery.style.animation = 'none'; // Disable animation
+        gallery.style.overflowX = 'auto'; // Enable horizontal scrolling
+        gallery.style.scrollBehavior = 'smooth'; // Smooth scrolling
+
+        // Update scroll indicators on scroll
+        gallery.addEventListener('scroll', () => {
+            const scrollLeft = gallery.scrollLeft;
+            const scrollWidth = gallery.scrollWidth - gallery.clientWidth;
+            const activeIndex = Math.round((scrollLeft / scrollWidth) * (indicators.length - 1));
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === activeIndex);
+            });
+        });
+    }
+});
+
+// Add smooth scroll for gallery on mobile
+document.querySelector('.scrolling-gallery').addEventListener('touchstart', (e) => {
+    e.target.style.scrollBehavior = 'smooth';
+});
+  </script>
+</body>
+</html>
